@@ -1,0 +1,31 @@
+batch:
+  datasource:
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+primary:
+  datasource:
+    url: jdbc:sap://localhost:30115/
+    username: SAPMMUSER
+    password: Test1234!
+    driver-class-name: com.sap.db.jdbc.Driver
+secondary:
+  datasource:
+    url: jdbc:sap://localhost:30215/
+    username: I325362
+    password: Test1234!
+    driver-class-name: com.sap.db.jdbc.Driver
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.HANAColumnStoreDialect
+        ddl-auto: validate
+        hbm2ddl:
+          import_files:
+spring:
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: true

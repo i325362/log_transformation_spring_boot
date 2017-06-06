@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<company>
+    <record refId="1001">
+        <name>Monisha</name>
+        <age>26</age>
+        <dob>31/8/1990</dob>
+        <income>100000,000</income>
+    </record>
+</company>
